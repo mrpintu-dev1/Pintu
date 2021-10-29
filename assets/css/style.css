@@ -1,0 +1,403 @@
+/*===================================================================================
+
+    Template Name: 
+    Template URI: 
+    Description: 
+    Author: 
+    Author URI: 
+
+===================================================================================== 
+
+    ============================================= 
+    ============= CSS Index =====================
+    =============================================
+    1. theme default css
+    2. header css
+    3.
+    4.
+    5.
+    6.
+    7.
+    8.
+    9.
+    10.
+    11.
+    12.
+    13.
+    14.
+    15.
+
+===================================================================================*/
+
+/*=======================================
+======= 1. theme default css 
+=======================================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html,
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+}
+
+ul {
+    list-style: outside none none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000
+}
+
+/* Padding top */
+.pt-80 {
+    padding-top: 80px;
+}
+
+.pt-100 {
+    padding-top: 100px;
+}
+
+/* Padding right */
+.pr-40 {
+    padding-right: 40px;
+}
+
+/* Padding bottom */
+.pb-80 {
+    padding-bottom: 80px;
+}
+.pb-50 {
+    padding-bottom: 50px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+.pb-15 {
+    padding-bottom: 15px;
+}
+
+/* Padding left */
+.pl-40 {
+    padding-left: 40px;
+}
+
+/* Margin left */
+.mr-10 {
+    margin-right: 10px;
+}
+/* Margin right */
+.ml-10 {
+    margin-left: 10px;
+}
+
+
+.overlay {
+    position: relative;
+}
+
+.overlay::after {
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.section-title .section-title-inner h6 {
+    font-size: 18px;
+    font-weight: 500;
+    color: red;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.section-title .section-title-inner h6::after {
+    position: absolute;
+    content: '';
+    background-color: red;
+    height: 2px;
+    width: 48px;
+    bottom: 40%;
+    left: 8%;
+}
+
+.section-title .section-title-inner h1 {
+    font-size: 56px;
+    text-transform: capitalize;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+
+
+.section-title .section-title-inner p {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+}
+
+/*=======================================
+======= 2. header css
+=======================================*/
+
+.sticky-bar.stick {
+    background-color: #fff;
+    position: fixed;
+    border-bottom: 0 solid #4a90e2;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .08 );
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: all .3s ease 0s;
+    animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+.header-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.main-menu ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.main-menu ul:last-child {
+    padding-right: 0;
+}
+
+nav.main-menu ul li a {
+    font-size: 15px;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 90px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    transition: all 0.3s;
+    z-index: 999;
+}
+
+nav.main-menu ul li a:hover {
+    color: red;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #000;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 90px;
+}
+
+.logo a span {
+    color: #fff;
+    background-color: red;
+    padding: 4px 9px;
+}
+
+/*=======================================
+======= 3. hero css
+=======================================*/
+
+.hero-area .container {
+    position: relative;
+}
+
+.hero-area .hero-height {
+    height: 667px;
+}
+.hero-area .hero-height .hero-image img {
+    background-position: center center;
+    background-size: cover;
+    -webkit-animation-delay: 1.1s;
+    animation-delay: 1.1s;
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+.hero-area .content {
+    position: absolute;
+    bottom: 160px;
+    left: 0;
+}
+
+.content h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 30px;
+    -webkit-animation-delay: 1.1s;
+    animation-delay: 1.1s;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.content h1 {
+    font-size: 60px;
+    font-weight: 600;
+    -webkit-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.content p {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+    margin: 40px 0 50px;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.default-btn {
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #999;
+    padding: 13px 31px;
+    border-radius: 8px;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+}
+
+.content a {
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.content a:hover {
+    color: red;
+    border: 2px solid red;
+}
+
+.content h1 span {
+    color: red;
+}
+
+/*=======================================
+======= 4. About css
+=======================================*/
+
+.about-content-area.pt-80 .about-details h2 {
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.about-content-area .about-details h5 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 42px;
+}
+.about-content-area .about-details h5 span {
+    color: red;
+}
+
+.about-content-area .about-details p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.about-content-area .about-personal-info {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.about-content-area .about-personal-info .about-personal-info-title h4 {
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+
+.about-content-area .about-personal-info p {
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.about-content-area .about-personal-info p span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.about-content-area .about-personal-info .personal-info-btn a:hover {
+    color: red;
+    border: 2px solid red;
+}
+
+section.my-experience-area .section-title-inner h1 {
+    font-size: 36px;
+    text-transform: capitalize;
+}
+
+section.my-experience-area .content-area a {
+    padding: 8px 38px;
+}
+
+section.my-experience-area .content-area .default-btn.active {
+    color: #fff;
+    background-color: red;
+    border: 2px solid red;
+}
+
+.my-experience-area .main-content p {
+    line-height: 31px;
+}
+
+section.my-experience-area .main-content p span {
+    color: red;
+    line-height: 50px;
+    padding-left: 30px;
+}
+
+.my-experience-area .main-content {
+    padding-bottom: 85px;
+    padding-left: 50px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ffffff;
+}
