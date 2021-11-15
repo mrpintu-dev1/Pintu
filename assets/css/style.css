@@ -13,19 +13,13 @@
     =============================================
     1. theme default css
     2. header css
-    3.
-    4.
-    5.
-    6.
-    7.
-    8.
-    9.
-    10.
-    11.
-    12.
-    13.
-    14.
-    15.
+    3. hero
+    4. about
+    5. my experience
+    6. service
+    7. portfolio
+    8. news css
+    9. footer css
 
 ===================================================================================*/
 
@@ -44,6 +38,7 @@
 html,
 body {
     margin: 0;
+    padding: 0;
     font-family: "Poppins", sans-serif;
     height: 100vh;
 }
@@ -82,6 +77,10 @@ a:hover {
     padding-top: 80px;
 }
 
+.pt-40 {
+    padding-top: 40px;
+}
+
 .pt-15 {
     padding-top: 15px;
 }
@@ -93,6 +92,10 @@ a:hover {
 /* Padding right */
 .pr-40 {
     padding-right: 40px;
+}
+
+.pr-80 {
+    padding-right: 80px;
 }
 
 .pr-20 {
@@ -125,6 +128,9 @@ a:hover {
 }
 .pl-20 {
     padding-left: 20px;
+}
+.pl-80 {
+    padding-left: 80px;
 }
 
 /* Margin left */
@@ -185,22 +191,11 @@ a:hover {
     letter-spacing: 1.3px;
 }
 
+
+
 /*=======================================
 ======= 2. header css
 =======================================*/
-
-.sticky-bar.stick {
-    background-color: #fff;
-    position: fixed;
-    border-bottom: 0 solid #4a90e2;
-    box-shadow: 0 0 25px rgba(0, 0, 0, .08 );
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    transition: all .3s ease 0s;
-    animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
-}
 
 .header-area {
     position: fixed;
@@ -209,6 +204,9 @@ a:hover {
     right: 0;
     z-index: 999;
 }
+
+
+
 
 .main-menu ul li {
     display: inline-block;
@@ -223,33 +221,131 @@ nav.main-menu ul li a {
     font-size: 15px;
     display: inline-block;
     text-decoration: none;
-    color: #000;
+    color: #fff;
     text-align: center;
     text-transform: uppercase;
-    line-height: 90px;
+    line-height: 80px;
     font-weight: 500;
     letter-spacing: 0.8px;
     transition: all 0.3s;
     z-index: 999;
 }
 
+nav.main-menu ul li a.active {
+    color: #000;
+}
+
 nav.main-menu ul li a:hover {
-    color: red;
+    color: #000;
 }
 
 .logo a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-size: 40px;
     font-weight: 600;
-    line-height: 90px;
+    line-height: 80px;
 }
 
 .logo a span {
-    color: #fff;
+    color: #000;
     background-color: red;
-    padding: 4px 9px;
+    padding: 2px 9px;
 }
+
+header.header-area.sticky-bar .col-md-5 {
+    padding-right: 0;
+}
+
+header.header-area.sticky-bar .col-md-7 {
+    padding-left: 0;
+}
+
+.logo-area,
+.menu-area {
+    position: relative;
+}
+
+.logo-area {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.menu-area {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.logo-area::before,
+.menu-area::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    top: 10px;
+    background-color: red;
+    z-index: -1;
+    border-radius: 5px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+.logo-area::before {
+    -webkit-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -ms-transform: skew(-20deg);
+    transform: skew(-20deg);
+    top: 0;
+    left: -1000px;
+    right: 150px;
+    height: 100px;
+}
+
+.menu-area::before {
+    -webkit-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -ms-transform: skew(-20deg);
+    transform: skew(-20deg);
+    left: 0;
+    right: -1000px;
+    
+}
+
+.sticky-bar.stick {
+    background-color: #fff;
+    position: fixed;
+    border-bottom: 0 solid #4a90e2;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .08 );
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: all .3s ease 0s;
+    
+}
+
+header.header-area.sticky-bar.stick .menu-area::before {
+    top: 0;
+    left: -60px;
+    border-radius: 0;
+    height: 100%;
+}
+header.header-area.sticky-bar.stick .logo-area::before {
+    right: 60.1px;
+    height: 100%;
+    border-radius: 0;
+    height: 100%;
+}
+
+.sticky-bar.stick nav.main-menu ul li a,
+.sticky-bar.stick .logo a{
+    line-height: 60px;
+}
+
 
 /*=======================================
 ======= 3. hero css
@@ -387,6 +483,10 @@ nav.main-menu ul li a:hover {
     border: 2px solid red;
 }
 
+/*=======================================
+======= 5. My experience css 
+=======================================*/
+
 section.my-experience-area .section-title-inner h1 {
     font-size: 36px;
     text-transform: capitalize;
@@ -475,6 +575,10 @@ section.my-experience-area .tab-pane .title {
     margin-top: 9px;
 }
 
+/*=======================================
+======= 6. service section css 
+=======================================*/
+
 section#service .service-main-content .service-img img {
     height: 50px;
     width: 50px;
@@ -539,6 +643,10 @@ section#service .section-content a:hover .service-main-content .learn-more p{
     color: red;
 }
 
+/*=======================================
+======= 7. Portfolio css 
+=======================================*/
+
 
 section#portfolio .section-content .content-wrapper {
     position: relative;
@@ -592,9 +700,9 @@ section#portfolio .section-content .col-md-4:hover .content-wrapper::after {
 section#portfolio .section-content .col-md-4:hover .portfolio-content {
     opacity: 1;
 }
-section#portfolio .section-content .col-md-4:hover section#portfolio .content-wrapper img {
-    -webkit-transform: scaleX(20deg);
-    transform: scaleX(20deg);
+section#portfolio .section-content .col-md-4 .content-wrapper:hover section#portfolio .content-wrapper img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 #testimonial .section-title .section-title-inner h6::after {
@@ -608,8 +716,6 @@ section#portfolio .section-content .col-md-4:hover section#portfolio .content-wr
     border: 1px solid red;
     border-radius: 50%;
     position: absolute;
-    /* transform: translate(-60%, -60%); */
-    /* position: fixed; */
     transition-duration: 200ms;
     transition-timing-function: ease-out;
     animation: cursorAnim .5s infinite alternate;
@@ -665,6 +771,260 @@ section#portfolio .section-content .col-md-4:hover section#portfolio .content-wr
     animation: cursorAnim3 .5s forwards;
     border: 1px solid red;
 }
+
+.testimonial-slider-wrapper .single-item .row {
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-slider-wrapper .single-item {
+    padding: 0px 100px;
+}
+
+.testimonial-slider-wrapper .single-item .slider-img img {
+    border-radius: 10px;
+}
+
+.testimonial-slider-wrapper .single-item .slider-img {
+    padding: 15px;
+    margin-right: 10px;
+}
+
+.testimonial-slider-wrapper .single-item .testimonial-content {
+    margin-left: 15px;
+}
+
+.testimonial-slider-wrapper .single-item .testimonial-content p {
+    line-height: 30px;
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+.testimonial-slider-wrapper .single-item .testimonial-content .details {
+    margin-top: 30px;
+    text-align: left;
+    padding: 0px 135px;
+}
+
+.testimonial-slider-wrapper .single-item .testimonial-content .details h3 {
+    position: relative;
+}
+
+.testimonial-slider-wrapper .single-item .testimonial-content .details h3::before {
+    position: absolute;
+    top: 50%;
+    right: 111%;
+    height: 2px;
+    width: 100px;
+    background-color: red;
+    content: "";
+}
+
+
+.testimonial-slider-wrapper.owl-carousel {
+    position: relative;
+}
+
+
+.testimonial-slider-wrapper.owl-carousel .owl-nav button {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    margin-top: -25px;
+}
+
+.testimonial-slider-wrapper.owl-carousel .owl-nav button:hover {
+    border: 1px solid red;
+    background-color: red;
+    color: #fff;
+}
+
+.testimonial-slider-wrapper.owl-carousel .owl-nav button i {
+    font-size: 20px;
+}
+
+.testimonial-slider-wrapper.owl-carousel .owl-nav button.owl-prev {
+    left: 0;
+}
+
+.testimonial-slider-wrapper.owl-carousel .owl-nav button.owl-next {
+    right: 0;
+}
+
+/*=======================================
+======= 8. news section css 
+=======================================*/
+
+section#news .section-title-inner h6::after {
+    left: 6%;
+}
+
+section#news .section-content .news-content-wrapper .content-img {
+    position: relative;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: red;
+}
+
+section#news .section-content .news-content-wrapper .content-img img {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: center;
+    background-size: cover;
+    transition: all .5s ease-in-out 0s;
+}
+
+section#news .section-content .news-content-wrapper .content-inner p {
+    line-height: 56px;
+}
+
+section#news .section-content .news-content-wrapper .content-inner p span {
+    position: relative;
+    margin-left: 20px;
+
+}
+
+section#news .section-content .news-content-wrapper .content-inner p span::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: -13px;
+    background-color: #999;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}
+
+
+section#news .section-content .news-content-wrapper .content-inner h3 {
+    padding-top: 0;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+section#news .section-content .news-content-wrapper .content-inner a {
+    text-decoration: none;
+    color: #000;
+}
+section#news .section-content .news-content-wrapper .content-inner a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+section#news .section-content .news-content-wrapper .content-img:hover img {
+    transform: rotateZ(10deg) scale(1.15);
+    background-position-x: 100%;
+}
+
+/*=======================================
+======= 9. footer css 
+=======================================*/
+
+section.footer-top-area .content .content-wrapper p {
+    font-size: 18px;
+    margin: 0 0;
+    color: #999;
+    line-height: 54px;
+}
+
+section.footer-top-area .content .content-wrapper p i {
+    font-size: 25px;
+    color: red;
+    padding-right: 12px;
+}
+
+section.footer-top-area .message-content p {
+    font-size: 22px;
+    font-weight: 400;
+    color: #999;
+    line-height: 40px;
+}
+
+section.footer-top-area .message-content p span {
+    color: #000;
+    font-weight: 500;
+}
+
+section.footer-top-area .message-content form input {
+    text-decoration: none;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px;
+    margin-top: 15px;
+    line-height: 43px;
+}
+
+section.footer-top-area .message-content form {
+    padding-top: 50px;
+}
+
+section.footer-top-area .message-content form input[type='submit'] {
+    font-size: 18px;
+    background-color: red;
+    color: #fff;
+    padding: 5px 31px;
+    border-radius: 10px;
+}
+
+section.footer-top-area .message-content form .name, .message-content form .message {
+    display: block;
+    border-bottom: 1px solid #999;
+}
+
+section.footer-top-area .message-content form .name input, section.footer-top-area .message-content form .message input {
+    border-bottom: none;
+}
+
+footer#contact .section-title-inner h6::after {
+    left: 20%;
+}
+
+section.footer-bottom-area {
+    background-color: #191c26;
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    margin-top: 100px;
+}
+
+section.footer-bottom-area .footer-content p {
+    font-size: 17px;
+    line-height: 40px;
+}
+
+div#scrollUp {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 50%;
+    bottom: 15px;
+    color: #fff;
+    right: 15px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+div#scrollUp span i {
+    font-size: 35px;
+    margin-top: 8px;
+}
+
+
+
 
 
 
