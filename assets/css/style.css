@@ -143,11 +143,9 @@ a:hover {
 }
 
 
-.overlay {
-    position: relative;
-}
 
-.overlay::after {
+
+.overlay {
     content: "";
     left: 0;
     top: 0;
@@ -155,6 +153,7 @@ a:hover {
     right: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, .85);
     position: absolute;
 }
 
@@ -282,7 +281,7 @@ header.header-area.sticky-bar .col-md-7 {
     content: "";
     bottom: 0;
     top: 10px;
-    background-color: red;
+    background-color: #526785;
     z-index: -1;
     border-radius: 5px;
     -webkit-transition: all .3s;
@@ -315,12 +314,12 @@ header.header-area.sticky-bar .col-md-7 {
 }
 
 .sticky-bar.stick {
-    background-color: #fff;
+    background-color: #526785;
     position: fixed;
     border-bottom: 0 solid #4a90e2;
     box-shadow: 0 0 25px rgba(0, 0, 0, .08 );
     width: 100%;
-    height: 90px;
+    height: 60px;
     top: 0;
     left: 0;
     z-index: 999;
@@ -350,14 +349,14 @@ header.header-area.sticky-bar.stick .logo-area::before {
 /*=======================================
 ======= 3. hero css
 =======================================*/
+.hero-area {
+    position: relative;
+}
 
 .hero-area .container {
     position: relative;
 }
 
-.hero-area .hero-height {
-    height: 667px;
-}
 .hero-area .hero-height .hero-image img {
     background-position: center center;
     background-size: cover;
@@ -365,11 +364,12 @@ header.header-area.sticky-bar.stick .logo-area::before {
     animation-delay: 1.1s;
     -webkit-animation-name: fadeInRight;
     animation-name: fadeInRight;
+    height: 100vh;
 }
 
 .hero-area .content {
     position: absolute;
-    bottom: 160px;
+    bottom: 80px;
     left: 0;
 }
 
@@ -377,6 +377,7 @@ header.header-area.sticky-bar.stick .logo-area::before {
     font-size: 30px;
     font-weight: 500;
     margin-top: 30px;
+    color: #fff;
     -webkit-animation-delay: 1.1s;
     animation-delay: 1.1s;
     -webkit-animation-name: fadeInUp;
@@ -385,6 +386,7 @@ header.header-area.sticky-bar.stick .logo-area::before {
 
 .content h1 {
     font-size: 60px;
+    color: #fff;
     font-weight: 600;
     -webkit-animation-delay: 1.3s;
     animation-delay: 1.3s;
@@ -395,6 +397,7 @@ header.header-area.sticky-bar.stick .logo-area::before {
 .content p {
     font-size: 16px;
     letter-spacing: 0.8px;
+    color: #fff;
     font-weight: 400;
     margin: 40px 0 50px;
     -webkit-animation-delay: 1.5s;
@@ -420,6 +423,7 @@ header.header-area.sticky-bar.stick .logo-area::before {
     animation-delay: 1.6s;
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
+    color: #fff;
 }
 
 .content a:hover {
@@ -428,7 +432,7 @@ header.header-area.sticky-bar.stick .logo-area::before {
 }
 
 .content h1 span {
-    color: red;
+    color: #fff;
 }
 
 /*=======================================
@@ -992,7 +996,7 @@ footer#contact .section-title-inner h6::after {
 }
 
 section.footer-bottom-area {
-    background-color: #191c26;
+    background-color: #526785;
     color: #fff;
     text-align: center;
     padding: 40px;
