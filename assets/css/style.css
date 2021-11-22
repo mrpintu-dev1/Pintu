@@ -614,7 +614,7 @@ header.header-area.sticky-bar.stick .logo-area::before {
     }
 
     .about-area .section-title .section-title-inner h6::after {
-        left: 21%;
+        left: 23%;
     }
 
     .section-title .section-title-inner h1 {
@@ -628,6 +628,12 @@ header.header-area.sticky-bar.stick .logo-area::before {
     .about-content-area.pt-80 .about-details h2 {
         font-size: 36px;
         font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .about-area .section-title .section-title-inner h6::after {
+        left: 25%;
     }
 }
 
@@ -740,6 +746,14 @@ section.my-experience-area .tab-pane .title {
 }
 
 @media only screen and (max-width: 576px) {
+
+}
+
+@media only screen and (max-width: 425px) {
+    
+    section.my-experience-area .content-area a {
+        padding: 8px 12px;
+    }
 
 }
 
@@ -891,6 +905,20 @@ section#service .section-content a:hover .service-main-content .learn-more p{
     }
 
     section#service .section-content a:hover .service-main-content .learn-more p::after{
+        left: 33%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .section-title .section-title-inner h6::after {
+        left: 22%;
+    }
+
+    section#service .service-main-content .learn-more p::before {
+        left: 32%;
+    }
+
+    section#service .service-main-content .learn-more p::after {
         left: 33%;
     }
 }
@@ -1165,6 +1193,13 @@ section#portfolio .section-content .col-md-4 .content-wrapper:hover section#port
     }
 }
 
+@media only screen and (max-width: 425px) {
+    #testimonial .section-title .section-title-inner h6::after {
+        left: 33%;
+    }
+}
+
+
 /*=======================================
 ======= 8. news section css 
 =======================================*/
@@ -1380,6 +1415,12 @@ div#scrollUp span i {
 @media only screen and (max-width: 576px) {
     footer#contact .section-title-inner h6::after {
         left: 23%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    footer#contact .section-title-inner h6::after {
+        left: 25%;
     }
 }
 
