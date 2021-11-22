@@ -1,10 +1,33 @@
 (function($) {
     "use strict";
+
+
+    // owl carousel
+    $('.testimonial-slider-wrapper').owlCarousel({
+        loop:true,
+        nav: true,
+        navText: ['<i class="fa fa-long-arrow-left"></i>', '<i class="fa fa-long-arrow-right"></i>'],
+        responsiveClass:true,
+        responsive:{
+            1000:{
+                items:1
+            },
+            600:{
+                items:1,
+                nav: false,
+                loop: true
+            },
+            0:{
+                items:1,
+                nav: false,
+                loop: true
+            }
+        }
+    });
     
     /*------ Menu stick ----*/
     const header = $('.sticky-bar')
     var scrollUp = $('#scrollUp')
-    var service = $('#service')
     const win = $(window)
     win.on('scroll', function(e) {
 
@@ -48,29 +71,6 @@
         }, 500)
     })
 
-    // owl carousel
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav: true,
-        navText: ['<i class="fa fa-long-arrow-left"></i>', '<i class="fa fa-long-arrow-right"></i>'],
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            1000:{
-                items:1
-            }
-        }
-    });
-
-
-    /*------ Wow Active ----*/
-    new WOW().init();
     
 
 })(jQuery);

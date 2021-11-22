@@ -37,10 +37,15 @@
 }
 html,
 body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
-    height: 100vh;
+    
 }
 
 ul {
@@ -133,6 +138,7 @@ a:hover {
     padding-left: 80px;
 }
 
+
 /* Margin left */
 .mr-10 {
     margin-right: 10px;
@@ -178,6 +184,40 @@ a:hover {
     letter-spacing: 1.3px;
 }
 
+.fix {
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .pl-md-15 {
+        padding-left: 15px;
+    }
+
+    .pt-md-20 {
+        padding-top: 20px;
+    }
+    
+    .pt-md-40 {
+        padding-top: 40px;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 576px) {
+    .pb-sm-15 {
+        padding-bottom: 15px;
+    }
+
+
+}
+
 
 
 /*=======================================
@@ -193,11 +233,14 @@ a:hover {
 }
 
 
+.main-menu ul {
+    text-align: center;
+}
 
 
 .main-menu ul li {
     display: inline-block;
-    padding: 0 15px;
+    padding: 10px 10px 0;
 }
 
 .main-menu ul:last-child {
@@ -240,13 +283,6 @@ nav.main-menu ul li a:hover {
     padding: 2px 9px;
 }
 
-header.header-area.sticky-bar .col-md-5 {
-    padding-right: 0;
-}
-
-header.header-area.sticky-bar .col-md-7 {
-    padding-left: 0;
-}
 
 .logo-area,
 .menu-area {
@@ -261,6 +297,10 @@ header.header-area.sticky-bar .col-md-7 {
 .menu-area {
     margin-right: 0;
     padding-right: 0;
+}
+
+.menu-area .menu-btn{
+    display: none;
 }
 
 .logo-area::before,
@@ -286,7 +326,7 @@ header.header-area.sticky-bar .col-md-7 {
     transform: skew(-20deg);
     top: 0;
     left: -1000px;
-    right: 150px;
+    right: 100px;
     height: 100px;
 }
 
@@ -321,6 +361,8 @@ header.header-area.sticky-bar.stick .menu-area::before {
     border-radius: 0;
     height: 100%;
 }
+
+
 header.header-area.sticky-bar.stick .logo-area::before {
     right: 60.1px;
     height: 100%;
@@ -328,18 +370,74 @@ header.header-area.sticky-bar.stick .logo-area::before {
     height: 100%;
 }
 
+.sticky-bar.stick .main-menu ul li {
+    padding: 0 10px;
+}
+
 .sticky-bar.stick nav.main-menu ul li a,
 .sticky-bar.stick .logo a{
     line-height: 60px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .logo-area::before {
+        right: 50px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .logo-area::before {
+        right: 0;
+        height: 100%;
+        transform: skew(0);
+    }
+    
+    .menu-area::before {
+        top: 0;
+        transform: skew(0);
+        height: 100%;
+    }
+
+    .main-menu ul li {
+        padding-top: 0;
+    }
+    
+    header.header-area.sticky-bar {
+        background-color: #526785;
+        height: 70px;
+    }
+
+    nav.main-menu ul li a, .logo a {
+        line-height: 60px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .header-area {
+        background-color: #526785;
+    }
+    .logo-area::before {
+        -webkit-transform: skew(0);
+        -o-transform: skew(0);
+        -moz-transform: skew(0);
+        -ms-transform: skew(0);
+        transform: skew(0);
+        right: -150px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
 }
 
 
 /*=======================================
 ======= 3. hero css
 =======================================*/
-.hero-area {
-    position: relative;
-}
 
 .overlay {
     content: "";
@@ -354,23 +452,19 @@ header.header-area.sticky-bar.stick .logo-area::before {
     z-index: 1;
 }
 
-.hero-area .container {
+.hero-area .content-wrapper {
     position: relative;
 }
 
 .hero-area .hero-height .hero-image img {
     background-position: center center;
     background-size: cover;
-    -webkit-animation-delay: 1.1s;
-    animation-delay: 1.1s;
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
     height: 100vh;
 }
 
 .hero-area .content {
     position: absolute;
-    bottom: 80px;
+    bottom: 100px;
     left: 0;
     z-index: 2;
 }
@@ -380,20 +474,12 @@ header.header-area.sticky-bar.stick .logo-area::before {
     font-weight: 500;
     margin-top: 30px;
     color: #fff;
-    -webkit-animation-delay: 1.1s;
-    animation-delay: 1.1s;
-    -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
 }
 
 .content h1 {
     font-size: 60px;
     color: #fff;
     font-weight: 600;
-    -webkit-animation-delay: 1.3s;
-    animation-delay: 1.3s;
-    -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
 }
 
 .content p {
@@ -402,10 +488,6 @@ header.header-area.sticky-bar.stick .logo-area::before {
     color: #fff;
     font-weight: 400;
     margin: 40px 0 50px;
-    -webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s;
-    -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
 }
 
 .default-btn {
@@ -421,10 +503,6 @@ header.header-area.sticky-bar.stick .logo-area::before {
 }
 
 .content a {
-    -webkit-animation-delay: 1.6s;
-    animation-delay: 1.6s;
-    -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
     color: #fff;
 }
 
@@ -437,9 +515,21 @@ header.header-area.sticky-bar.stick .logo-area::before {
     color: #fff;
 }
 
+@media only screen and (max-width: 767px) {
+    .content h3 {
+        font-size: 24px;
+    }
+    .content h1 {
+        font-size: 42px;
+    }
+}
+
 /*=======================================
 ======= 4. About css
 =======================================*/
+.about-area .section-title .section-title-inner h6::after {
+    left: 10%;
+}
 
 .about-content-area.pt-80 .about-details h2 {
     font-size: 42px;
@@ -488,6 +578,60 @@ header.header-area.sticky-bar.stick .logo-area::before {
     color: red;
     border: 2px solid red;
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .about-area .section-title .section-title-inner h6::after {
+        left: 14%;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+    .about-area .section-title .section-title-inner h6::after {
+        left: 18%;
+    }
+
+    .section-title .section-title-inner h1 {
+        font-size: 42px;
+    }
+
+    .about-details.pb-15 {
+        padding-top: 20px;
+    }
+
+    .about-content-area.pt-80 .about-details h2 {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .about-area .section-title .section-title-inner h6::after {
+        left: 21%;
+    }
+
+    .section-title .section-title-inner h1 {
+        font-size: 36px;
+    }
+
+    .about-img {
+        margin: 0 auto;
+    }
+
+    .about-content-area.pt-80 .about-details h2 {
+        font-size: 36px;
+        font-weight: 600;
+    }
+}
+
+
 
 /*=======================================
 ======= 5. My experience css 
@@ -581,6 +725,26 @@ section.my-experience-area .tab-pane .title {
     margin-top: 9px;
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    section.my-experience-area .tab-pane .title {
+        padding-left: 0px;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+    
+}
+
+@media only screen and (max-width: 576px) {
+
+}
+
+
+
 /*=======================================
 ======= 6. service section css 
 =======================================*/
@@ -648,6 +812,90 @@ section#service .section-content a:hover .service-main-content .learn-more p::af
 section#service .section-content a:hover .service-main-content .learn-more p{
     color: red;
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .section-title .section-title-inner h6::after {
+        left: 10%;
+    }
+
+    section#service .service-main-content .learn-more p::before {
+        left: 60%;
+    }
+
+    section#service .service-main-content .learn-more p::after {
+        left: 62%;
+    }
+
+    section#service .section-content a:hover .service-main-content .learn-more p::after{
+        left: 77%;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .service-area .section-title .section-title-inner h6::after {
+        left: 13%;
+    }
+
+    section#service .service-main-content .service-title {
+        padding: 9px 0px;
+    }
+
+    section#service .service-main-content .learn-more p::before {
+        left: 40%;
+    }
+    
+    section#service .service-main-content .learn-more p::after {
+        left: 41%;
+    }
+
+    section#service .section-content a:hover .service-main-content .learn-more p::after{
+        left: 50%;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+    .section-title .section-title-inner h6::after {
+        left: 17%;
+    }
+
+    section#service .service-main-content .learn-more p::before {
+        left: 24%;
+    }
+
+    section#service .service-main-content .learn-more p::after {
+        left: 25%;
+    }
+
+    section#service .section-content a:hover .service-main-content .learn-more p::after{
+        left: 31%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .section-title .section-title-inner h6::after {
+        left: 19%;
+    }
+
+    .section-title .section-title-inner h1 {
+        font-size: 30px;
+    }
+
+    section#service .service-main-content .learn-more p::before {
+        left: 26%;
+    }
+
+    section#service .service-main-content .learn-more p::after {
+        left: 27%;
+    }
+
+    section#service .section-content a:hover .service-main-content .learn-more p::after{
+        left: 33%;
+    }
+}
+
+
 
 /*=======================================
 ======= 7. Portfolio css 
@@ -860,6 +1108,63 @@ section#portfolio .section-content .col-md-4 .content-wrapper:hover section#port
     right: 0;
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .portfolio-area .section-title .section-title-inner h6::after {
+        left: 10%;
+    }
+
+    #testimonial .section-title .section-title-inner h6::after {
+        left: 14%;
+    }
+
+    .testimonial-slider-wrapper.owl-carousel .owl-nav button.owl-prev {
+        left: 0px;
+    }
+    
+    .testimonial-slider-wrapper.owl-carousel .owl-nav button {
+        top: 25%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .portfolio-area .section-title .section-title-inner h6::after {
+        left: 14%;
+    }
+
+    #testimonial .section-title .section-title-inner h6::after {
+        left: 18%;
+    }
+
+    .testimonial-slider-wrapper .single-item .slider-img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .testimonial-slider-wrapper .single-item .testimonial-content p {
+        text-align: center;
+    }
+
+    .testimonial-slider-wrapper .single-item .testimonial-content .details {
+        text-align: center;
+        margin-left: 50px;
+    }
+
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 576px) {
+    #testimonial .section-title .section-title-inner h6::after {
+        left: 30%;
+    }
+
+    section#portfolio .section-content .content-wrapper {
+        padding: 20px;
+    }
+}
+
 /*=======================================
 ======= 8. news section css 
 =======================================*/
@@ -873,7 +1178,6 @@ section#news .section-content .news-content-wrapper .content-img {
     height: 350px;
     border-radius: 10px;
     overflow: hidden;
-    background-color: red;
 }
 
 section#news .section-content .news-content-wrapper .content-img img {
@@ -932,6 +1236,32 @@ section#news .section-content .news-content-wrapper .content-inner a:hover {
 section#news .section-content .news-content-wrapper .content-img:hover img {
     transform: rotateZ(10deg) scale(1.15);
     background-position-x: 100%;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    section#news .section-title-inner h6::after {
+        left: 9%;
+    }
+
+    section#news .section-content .news-content-wrapper .content-img {
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+    #news .section-title .section-title-inner h6::after {
+        left: 13%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #news .section-title .section-title-inner h6::after {
+        left: 14%;
+    }
 }
 
 /*=======================================
@@ -1027,6 +1357,30 @@ div#scrollUp {
 div#scrollUp span i {
     font-size: 35px;
     margin-top: 8px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    footer#contact .section-title-inner h6::after {
+        left: 15%;
+    }
+
+    section.footer-top-area .message-content form {
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 576px) {
+    footer#contact .section-title-inner h6::after {
+        left: 23%;
+    }
 }
 
 
