@@ -637,6 +637,12 @@ header.header-area.sticky-bar.stick .logo-area::before {
     }
 }
 
+@media only screen and (max-width: 375px) {
+    .about-area .section-title .section-title-inner h6::after {
+        left: 28%;
+    }
+}
+
 
 
 /*=======================================
@@ -736,13 +742,27 @@ section.my-experience-area .tab-pane .title {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    section.my-experience-area .tab-pane .title {
-        padding-left: 0px;
-    }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-    
+    section.my-experience-area .tab-pane .title {
+        padding-left: 0px;
+        padding-top: 40px;
+    }
+
+    section.my-experience-area .tab-pane .title-bar {
+        position: relative;
+    }
+
+    section.my-experience-area .tab-pane .title-bar::after {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        height: 2px;
+        width: 80px;
+        background-color: red;
+        content: "";
+    }
 }
 
 @media only screen and (max-width: 576px) {
@@ -837,7 +857,7 @@ section#service .section-content a:hover .service-main-content .learn-more p{
     }
 
     section#service .service-main-content .learn-more p::after {
-        left: 62%;
+        left: 61%;
     }
 
     section#service .section-content a:hover .service-main-content .learn-more p::after{
@@ -864,7 +884,7 @@ section#service .section-content a:hover .service-main-content .learn-more p{
     }
 
     section#service .section-content a:hover .service-main-content .learn-more p::after{
-        left: 50%;
+        left: 51%;
     }
 }
 
@@ -920,6 +940,20 @@ section#service .section-content a:hover .service-main-content .learn-more p{
 
     section#service .service-main-content .learn-more p::after {
         left: 33%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .section-title .section-title-inner h6::after {
+        left: 25%;
+    }
+
+    section#service .service-main-content .learn-more p::before {
+        left: 36%;
+    }
+
+    section#service .service-main-content .learn-more p::after {
+        left: 37%;
     }
 }
 
@@ -1180,6 +1214,22 @@ section#portfolio .section-content .col-md-4 .content-wrapper:hover section#port
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
+    #testimonial .section-title .section-title-inner h6::after {
+        left: 26%;
+    }
+
+    .testimonial-slider-wrapper .single-item .testimonial-content {
+        margin-left: 0px;
+    }
+
+    .testimonial-slider-wrapper .single-item .testimonial-content .details h3::before {
+        display: none;
+    }
+
+    .testimonial-slider-wrapper .single-item .testimonial-content .details {
+        padding: 0px 0px;
+        text-align: center;
+    }
 
 }
 
@@ -1191,11 +1241,35 @@ section#portfolio .section-content .col-md-4 .content-wrapper:hover section#port
     section#portfolio .section-content .content-wrapper {
         padding: 20px;
     }
+
+    .testimonial-slider-wrapper .single-item .testimonial-content p {
+        line-height: 26px;
+        font-size: 15px;
+    }
+
+    .testimonial-slider-wrapper .single-item .testimonial-content {
+        margin-left: 0px;
+    }
+
+    .testimonial-slider-wrapper .single-item .testimonial-content .details h3::before {
+        display: none;
+    }
+
+    .testimonial-slider-wrapper .single-item .testimonial-content .details {
+        padding: 0px 0px;
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 425px) {
     #testimonial .section-title .section-title-inner h6::after {
         left: 33%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #testimonial .section-title .section-title-inner h6::after {
+        left: 36%;
     }
 }
 
@@ -1296,6 +1370,12 @@ section#news .section-content .news-content-wrapper .content-img:hover img {
 @media only screen and (max-width: 576px) {
     #news .section-title .section-title-inner h6::after {
         left: 14%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #news .section-title .section-title-inner h6::after {
+        left: 18%;
     }
 }
 
